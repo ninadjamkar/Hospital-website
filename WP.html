@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cleveland Clinic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        #punch {
+            font-size: x-large;
+        }
+
+        .marqueeTxt {
+            background-color: rgb(74, 148, 74);
+            color: aliceblue;
+        }
+
+        .head1 {
+            border: 2px solid black;
+            background-color: rgb(25, 25, 25);
+            color: aliceblue;
+            text-align: center;
+        }
+
+        .loc_sec_head {
+            text-align: center;
+        }
+
+        #common1 {
+            text-align: center;
+            font-size: x-large;
+        }
+
+        #common2 {
+            text-align: center;
+            font-size: x-large;
+        }
+
+        #doctors1 {
+            text-align: center;
+            font-size: x-large;
+        }
+
+        .view {
+            text-align: center;
+        }
+
+        #blogs {
+            text-align: center;
+        }
+
+        #bv {
+            text-align: center;
+        }
+
+        #abt {
+            text-align: center;
+        }
+
+        .book {
+            display: flex;
+        }
+
+        .form {
+            border: 4px solid darkgreen;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bolder;
+            font-size: medium;
+            color: darkgreen;
+            width: 500px;
+            height: 600px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 5px;
+        }
+
+
+
+        #name {
+            width: 400px;
+            text-align: center;
+            margin-left: 50px;
+            border: 2px solid darkgreen;
+            border-radius: 5px;
+            color: darkgreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+        }
+
+        #email {
+            width: 400px;
+            text-align: center;
+            margin-left: 50px;
+            border: 2px solid darkgreen;
+            border-radius: 5px;
+            color: darkgreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+        }
+
+        #number {
+            width: 400px;
+            text-align: center;
+            margin-left: 50px;
+            border: 2px solid darkgreen;
+            border-radius: 5px;
+            color: darkgreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+        }
+
+        #submit {
+            width: 400px;
+            text-align: center;
+            margin-left: 50px;
+            border: 2px solid darkgreen;
+            border-radius: 5px;
+            color: darkgreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+
+        .btn10 {
+            border: 2px solid darkgreen;
+            border-radius: 5px;
+            color: darkgreen;
+
+        }
+
+        .error {
+            color: red;
+        }
+
+        .image {
+            margin-top: 30px;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Cleveland Clinic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#" target="_blank">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Blogs</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Book Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="Admin.html">Admin Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="angular.html">Doctors</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Our specialities
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Cardiology</a></li>
+                            <li><a class="dropdown-item" href="#">Nephrology</a></li>
+                            <li><a class="dropdown-item" href="#">Dermatology</a></li>
+                            <li><a class="dropdown-item" href="#">Orthopedics</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="alert alert-primary" role="alert" style="font-size: larger;">
+        <img src="https://newsroom.clevelandclinic.org/wp-content/uploads/sites/4/2022/03/2021_CCAD_Logo_updated-Full-Color.jpg"
+            height="70" width="300">
+        <b id="punch">. Partners in good health</b>
+    </div>
+
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="car">
+                <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://img.okadoc.com/uploads/photo/file/337/cleveland-clinic-al-maryah-island-abu-dhabi-abu-dhabi-20200810065856.jpg"
+                                height="600" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Best Infrastructure</h3>
+                                <p style="font-size: x-large;">Best rooms and well maintained infracture</p>
+                                <button type="button" class="btn btn-primary">Overview</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://c0.wallpaperflare.com/preview/386/354/385/analysis-hospital-doctor-medical.jpg"
+                                height="600" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3 style="color: rgb(2, 37, 37);">Qualified Doctors</h3>
+                                <p style="color: rgb(2, 37, 37); font-size: x-large;">Get treatment from highly
+                                    qualified doctors</p>
+                                <button type="button" class="btn btn-primary">Overview</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://bs-uploads.toptal.io/blackfish-uploads/uploaded_file/file/465203/image-1607186163027-08f7f301d7d9bc30bbb10ceed33134a0.gif"
+                                height="600" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Latest Technology</h3>
+                                <p style="font-size: x-large;">Technology based management</p>
+                                <button type="button" class="btn btn-primary">Overview</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            </button>
+        </div>
+    </div>
+    <hr>
+    <div class="alert alert-primary" role="alert">
+        <h3 id="abt">Cleveland Clinic - About US</h3>
+    </div>
+    <div class="container cont_padding">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="hosp_cards">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <img src="https://www.assaabloy.com/ae/en/images/project-reference/cleveland-clinic/shutterstock_765276637.jpg"
+                                class="img-responsive" alt="Mulund Hospital" style="width: 100%; margin-bottom: 20px;">
+                        </div>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="hosp_details_content">
+                                <h1>Cleveland Clinic - Abu Dabi</h1>
+
+                                <ul>
+                                    <li>Established in 2002, Cleveland Clinic, Abu Dabi is approximately 16 kms away
+                                        from
+                                        the international airport</li>
+                                    <li>Different means of transportation can be used to get to the hospital</li>
+                                    <li>Award winning and internationally acclaimed team of medical experts and
+                                        compassionate support team</li>
+                                    <li>Patient-centered medicine to prevent, diagnose and treat illness</li>
+                                    <li>World-class infrastructure and state-of-the-art medical technology</li>
+                                    <li>A pioneer in performing breakthrough procedures and bringing ground-breaking
+                                        healthcare technologies to India</li>
+                                    <li>Parking amenities for patients and visitors</li>
+                                    <li>Conveniently located hotels close to the hospital</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="common1" class="alert alert-success" role="alert">
+        <b>Cleveland Clinic - Specialities</b>
+    </div>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.shutterstock.com/image-illustration/green-24-hrs-service-ambulance-260nw-183732938.jpg"
+                        height="250" width="290" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">24/7 Ambulance </h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                        <a href="#" class="btn btn-outline-success">Know more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://as1.ftcdn.net/v2/jpg/01/24/61/30/500_F_124613045_Xijx9OpuT8PxBwuHhq9XFSKc4lB85cCT.jpg"
+                        height="250" width="290" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cardiology</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                        <a href="#" class="btn btn-outline-success">Know more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtixV1pTwKXO_0xC39FYwnnbaf7g90LNi6MhyYyz5S6gQ2Ebrz-_cTKyr7Lt6mLt8lQRM&usqp=CAU"
+                        height="250" width="290" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dental Care</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's
+                            content.</p>
+                        <a href="#" class="btn btn-outline-success">Know more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="view">
+            <button type="button" class="btn btn-success btn-lg">View All</button>
+        </div>
+    </div>
+    <hr>
+    <div id="common2" class="alert alert-success" role="alert" style="font-size: larger;">
+        <b>Cleveland Clinic - Statistics</b>
+    </div>
+    <section class="statistics_sec">
+        <div class="container stats_padding">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="count_cards">
+                                <img src="https://www.fortismumbai.com/frontend/mediaimage/Patients Treated-1646821025.png"
+                                    class="img-responsive">
+                                <h4 class="statics_count">6 Lakhs+</h4>
+                                <p class="count_name">Patients Treated</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="count_cards">
+                                <img src="https://www.fortismumbai.com/frontend/mediaimage/years-of-experience-1646821039.png"
+                                    class="img-responsive">
+                                <h4 class="statics_count">20+</h4>
+                                <p class="count_name">Years Of Experience</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="count_cards">
+                                <img src="https://www.fortismumbai.com/frontend/mediaimage/Departments-1646821071.png"
+                                    class="img-responsive">
+                                <h4 class="statics_count">20+</h4>
+                                <p class="count_name">Health Departments</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 col-xs-6">
+                            <div class="count_cards">
+                                <img src="https://www.fortismumbai.com/frontend/mediaimage/Support Staffs-1646821061.png"
+                                    class="img-responsive">
+                                <h4 class="statics_count">320+</h4>
+                                <p class="count_name">Beds</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="view">
+                    <button type="button" class="btn btn-success btn-lg">View All</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <div class="alert alert-info" role="alert">
+        <h3 id="doctors1">Get to know our team of experts</h3>
+    </div>
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="https://doctors.fortishealthcare.com/uploads/assets/doctors/2020/2/1580971927profile.png"
+                    height="300" width="300">
+                <h2 class="fw-normal">Dr Prashant Jagtap</h2>
+                <p>Some representative placeholder content for the three columns of text below the carousel. This is the
+                    first column.</p>
+                <p><a class="btn btn-primary" href="#">View details</a> | <a class="btn btn-success" href="payment.html"
+                        target="_blank">Book
+                        Appointment</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="https://doctors.fortishealthcare.com/uploads/assets/doctors/2020/2/1581332010profile.png"
+                    height="300" width="300">
+                <h2 class="fw-normal">Dr Amish Mhatre</h2>
+                <p>Some representative placeholder content for the three columns of text below the carousel. This is the
+                    first column.</p>
+                <p><a class="btn btn-primary" href="#">View details</a> | <a class="btn btn-success" href="validation.html">Book
+                        Appointment</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="https://doctors.fortishealthcare.com/uploads/assets/doctors/2020/5/1589435358profile.png"
+                    height="300" width="300">
+                <h2 class="fw-normal">Dr Hitesh Gunjal</h2>
+                <p>Some representative placeholder content for the three columns of text below the carousel. This is the
+                    first column.</p>
+                <p><a class="btn btn-primary" href="#">View details</a> | <a class="btn btn-success" href="#">Book
+                        Appointment</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <div class="view">
+            <button type="button" class="btn btn-primary btn-lg">View All</button>
+        </div>
+        <hr>
+        <div class="alert alert-success" role="alert">
+            <h3 id="abt">Book Appointment</h3>
+        </div>
+        <div class="book">
+            <div class="image">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.765681355834!2d72.93778782695308!3d19.161731500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b85e410ad361%3A0x6ca97bfe9216e096!2sFortis%20Hospital%20Mulund!5e0!3m2!1sen!2sin!4v1675827615144!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="form">
+
+                <form name="contactForm" onsubmit="return validateForm()" method="post">
+                    <br>
+                    <h2>Book Appointment</h2>
+                    <br>
+                    <div class="row">
+
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                        <div class="error" id="nameErr"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+
+                        <input type="text" id="email" name="email" placeholder="Enter your Email ID">
+                        <div class="error" id="emailErr"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+
+                        <input type="number" id="number" placeholder="Enter your number" name="mobile" maxlength="10">
+                        <div class="error" id="mobileErr"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label style="font-size: larger;">Select time slot:</label><br>
+                        <select name="country" style="font-size: larger; width: 400px; margin-left: 50px;">
+                            <option>Select time slot</option>
+                            <option>Morning</option>
+                            <option>Afternoon</option>
+                            <option>Evening</option>
+                        </select>
+                        <div class="error" id="countryErr"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label style="font-size: larger;">Select your gender:</label><br>
+
+                        <div class="form-inline">
+                            <lable style="font-size: larger;"><input type="radio" value="male" name="gender">Male
+                            </lable>
+                            <lable style="font-size: larger;"> <input type="radio" value="female" name="gender">Female
+                            </lable>
+                        </div>
+                        <div class="error" id="genderErr"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <input id="submit" type="submit" value="submit" onsubmit="myFunction()">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="alert alert-info" role="alert">
+            <h2 id="blogs">Our Blogs</h2>
+        </div>
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">COVID - 19<span class="text-muted"> - All you need to
+                        know</span></h2>
+                <p class="lead">Most people infected with the virus will experience mild to moderate respiratory illness
+                    and recover without requiring special treatment. However, some will become seriously ill and require
+                    medical attention. Older people and those with underlying medical conditions like cardiovascular
+                    disease, diabetes, chronic respiratory disease, or cancer are more likely to develop serious
+                    illness. Anyone can get sick with COVID-19 and become seriously ill or die at any age.
+
+                    The best way to prevent and slow down transmission is to be well informed about the disease and how
+                    the virus spreads. Protect yourself and others from infection by staying at least 1 metre apart from
+                    others, wearing a properly fitted mask, and washing your hands or using an alcohol-based rub
+                    frequently. Get vaccinated when it’s your turn and follow local guidance.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="https://icma.org/sites/default/files/styles/xlarge_image/public/10%20Tips%20for%20Organizing%20Effectively%20to%20Secure%20COVID-19%20Resources.png?itok=Zl6Hcymb"
+                    height="400" width="400">
+
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Monkey Pox<span class="text-muted">- All you need to
+                            know</span></h2>
+                    <p class="lead">Monkeypox is a viral zoonosis (a virus transmitted to humans from animals) with
+                        symptoms similar to those seen in the past in smallpox patients, although it is clinically less
+                        severe. With the eradication of smallpox in 1980 and subsequent cessation of smallpox
+                        vaccination, monkeypox has emerged as the most important orthopoxvirus for public health.
+                        Monkeypox primarily occurs in central and west Africa, often in proximity to tropical
+                        rainforests, and has been increasingly appearing in urban areas. Animal hosts include a range of
+                        rodents and non-human primates.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://www.dartmouth-hitchcock.org/sites/default/files/2022-08/monkeypox-image_0.jpg"
+                        height="350" width="400">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="bv" class="view">
+            <button type="button" class="btn btn-primary btn-lg">View All</button>
+        </div>
+        <hr>
+
+        <footer class="section footer-classic context-dark bg-image" style="background: #c6d4f2;">
+            <div class="container">
+                <div class="row row-30">
+                    <div class="col-md-4 col-xl-5">
+                        <div class="pr-xl-4">
+                            <p>We are an award-winning creative website, dedicated to the best result in web design,
+                                promotion, business consulting, and marketing.</p>
+
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contacts</h5>
+                        <dl class="contact-list">
+                            <dt>Address:</dt>
+                            <dd>Hiranandani Gardens, Powai, Mumbai</dd>
+                        </dl>
+                        <dl class="contact-list">
+                            <dt>email:</dt>
+                            <dd><a href="mailto:#">xyz@gmail.com</a></dd>
+                        </dl>
+                        <dl class="contact-list">
+                            <dt>phones:</dt>
+                            <dd><a href="tel:#">+91-8177963553</a> <span>or</span> <a href="tel:#">+91-9850345869</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-4 col-xl-3">
+                        <h5>Links</h5>
+                        <ul class="nav-list">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="images">
+                <div class="row no-gutters social-container">
+                    <div class="col"><a class="social-inner" href="#"><span
+                                class="icon mdi mdi-facebook"></span><span><img
+                                    src="https://westwind.org/wp-content/uploads/2018/11/facebook-logo-png.png"
+                                    height="50" width="50" /></span></a></div>
+                    <div class="col"><a class="social-inner" href="#"><span
+                                class="icon mdi mdi-instagram"></span><span><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                                    height="50" width="50" /></span></a></div>
+                    <div class="col"><a class="social-inner" href="#"><span
+                                class="icon mdi mdi-twitter"></span><span><img
+                                    src="https://cdn-icons-png.flaticon.com/512/174/174857.png" height="50"
+                                    width="50" /></span></a></div>
+                    <div class="col"><a class="social-inner" href="#"><span
+                                class="icon mdi mdi-youtube-play"></span><span><img
+                                    src="https://www.espronceda.net/wp-content/uploads/2021/12/format-twitter-logo-transparent-11549680770lolovrdq8m.png"
+                                    height="50" width="50" /></span></a></div>
+                </div>
+            </div>
+            <br>
+            <p class="rights"><span>© </span><span class="copyright-year">2022</span><span> </span><span>Cleveland
+                    Clinic</span><span> - </span><span>All Rights Reserved.</span></p>
+            <hr>
+        </footer>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+        <script>
+            function myFunction() {
+
+                Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "ninadjamkar@gmail.com",
+                    Password: "E06D823E5E2AB6A0D198103272581B76EB4E",
+                    To: "ninadjamkar45@gmail.com",
+                    From: "ninadjamkar45@gmail.com",
+                    Subject: "Appointment booking at Cleveland Clinic",
+                    Body: "We would like to inform you that your appointment has been booked at Cleveland Clinic."
+                }).then(
+                    message => alert("message")
+                );
+
+            }
+
+            function printError(elemId, hintMsg) {
+                document.getElementById(elemId).innerHTML = hintMsg;
+            }
+
+            function validateForm() {
+                var name = document.contactForm.name.value;
+                var email = document.contactForm.email.value;
+                var mobile = document.contactForm.mobile.value;
+                var country = document.contactForm.country.value;
+                var gender = document.contactForm.gender.value;
+
+                var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
+
+                //validate name
+                if (name == "") {
+                    printError("nameErr", "Please enter your name");
+                }
+                else {
+                    var regex = /^[a-zA-Z\s]+$/;
+                    if (regex.test(name) === false) {
+                        printError("nameErr", "Please enter a valid name");
+                    }
+                    else {
+                        printError("nameErr", "");
+                        nameErr = false;
+                    }
+                }
+
+                //validate email
+                if (email == "") {
+                    printError("emailErr", "Please enter your Email ID");
+                }
+                else {
+                    var regex = /^\S+@\S+\.\S+$/;
+                    if (regex.test(email) === false) {
+                        printError("emailErr", "Please enter a valid email address");
+                    }
+                    else {
+                        printError("emailErr", "");
+                        emailErr = false;
+                    }
+                }
+
+                //validate number
+                if (mobile == "") {
+                    printError("mobileErr", "Please enter your mobile number");
+                }
+                else {
+                    var regex = /^[1-9]\d{9}$/;
+                    if (regex.test(mobile) === false) {
+                        printError("mobileErr", "Please enter a valid mobile number");
+                    }
+                    else {
+                        printError("mobileErr", "");
+                        mobileErr = false;
+                    }
+                }
+
+                // Validate country
+                if (country == "Select") {
+                    printError("countryErr", "Please select your country");
+                }
+                else {
+                    printError("countryErr", "");
+                    countryErr = false;
+                }
+
+                // Validate gender
+                if (gender == "") {
+                    printError("genderErr", "Please select your gender");
+                }
+                else {
+                    printError("genderErr", "");
+                    genderErr = false;
+                }
+
+                if ((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) {
+                    return false;
+                }
+                else {
+
+                    var dataPreview = "You've entered the following details: \n" +
+                        "Full Name: " + name + "\n" +
+                        "Email Address: " + email + "\n" +
+                        "Mobile Number: " + mobile + "\n" +
+                        "Country: " + country + "\n" +
+                        "Gender: " + gender + "\n";
+
+                    alert(dataPreview);
+                }
+            }
+        </script>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

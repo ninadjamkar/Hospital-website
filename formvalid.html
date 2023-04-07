@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <form  name="contactForm" onsubmit="return validateForm()">
+        <h2>Form Validation</h2>
+        <div class="row">
+            
+            <input type="text" name="name" placeholder="Enter your name">
+            <div class="error" id="nameErr"></div>
+        </div>
+        <br>
+        <div class="row">
+            
+            <input type="text" name="email" placeholder="Enter your Email ID">
+            <div class="error" id="emailErr"></div>
+        </div>
+        <br>
+        <div class="row">
+            
+            <input type="number" placeholder="Enter your number" name="mobile" maxlength="10">
+            <div class="error" id="mobileErr"></div>
+        </div>
+        <br>
+        <div class="row">
+            <label for="">Select time slot:</label><br><br>
+            <select name="country">
+                <option>Select time slot</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+            </select>
+            <div class="error" id="countryErr"></div>
+        </div>
+        <br><br>
+        <div class="row">
+            <label for="">Select your gender:</label><br><br>
+            
+            <div class="form-inline">
+                <lable><input type="radio" value="male" name="gender">Male</lable>
+                <lable><input type="radio" value="female" name="gender">Female</lable>
+            </div>
+            <div class="error" id="genderErr"></div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <input type="submit" value="submit">
+        </div>
+    </form>
+
+
+    <script>
+
+        // Defining a function to display error message
+        function printError(elemId, hintMsg) {
+            document.getElementById(elemId).innerHTML = hintMsg;
+        }
+
+        function validateForm() {
+            var name = document.contactForm.name.value;
+            var email = document.contactForm.email.value;
+            var mobile = document.contactForm.mobile.value;
+            var country = document.contactForm.country.value;
+            var gender = document.contactForm.gender.value;
+
+            var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
+
+            //validate name
+            if (name == "") {
+                printError("nameErr", "Please enter your name");
+            }
+            else {
+                var regex = /^[a-zA-Z\s]+$/;
+                if (regex.test(name) === false) {
+                    printError("nameErr", "Please enter a valid name");
+                }
+                else {
+                    printError("nameErr", "");
+                    nameErr = false;
+                }
+            }
+
+            //validate email
+            if (email == "") {
+                printError("emailErr", "Please enter your Email ID");
+            }
+            else {
+                var regex = /^\S+@\S+\.\S+$/;
+                if (regex.test(email) === false) {
+                    printError("emailErr", "Please enter a valid email address");
+                }
+                else {
+                    printError("emailErr", "");
+                    emailErr = false;
+                }
+            }
+
+            //validate number
+            if (mobile == "") {
+                printError("mobileErr", "Please enter your mobile number");
+            }
+            else {
+                var regex = /^[1-9]\d{9}$/;
+                if (regex.test(mobile) === false) {
+                    printError("mobileErr", "Please enter a valid mobile number");
+                }
+                else {
+                    printError("mobileErr", "");
+                    mobileErr = false;
+                }
+            }
+
+            // Validate country
+            if (country == "Select") {
+                printError("countryErr", "Please select your country");
+            }
+            else {
+                printError("countryErr", "");
+                countryErr = false;
+            }
+
+            // Validate gender
+            if (gender == "") {
+                printError("genderErr", "Please select your gender");
+            }
+            else {
+                printError("genderErr", "");
+                genderErr = false;
+            }
+
+            if ((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) {
+                return false;
+            } 
+            else {
+
+                var dataPreview = "You've entered the following details: \n" +
+                    "Full Name: " + name + "\n" +
+                    "Email Address: " + email + "\n" +
+                    "Mobile Number: " + mobile + "\n" +
+                    "Country: " + country + "\n" +
+                    "Gender: " + gender + "\n";
+
+                alert(dataPreview);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
